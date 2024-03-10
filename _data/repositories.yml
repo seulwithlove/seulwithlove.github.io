@@ -1,12 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - seulwithlove
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - seulwithlove/
+  - seulwithlove/aiffel_core_7th
+  - seulwithlove/Aiffel_DLthon
+  - thetjswo/PJ_AIFFELthon
+  - Kimgabe/PJ_Quick_draws
+
