@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: CV
 nav: true
 nav_order: 2
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+cv_pdf: lee_seul_resume_2024.pdf
+description: 사랑을 담아 변화를 만드는 AI 액티비스트 개발자
 toc:
   sidebar: left
 ---
