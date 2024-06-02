@@ -11,3 +11,6 @@ assets/libs/
 node_modules/
 vendor
 .idea
+.vscode/settings.json
+package-lock.json
+.python-version
