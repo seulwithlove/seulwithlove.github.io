@@ -3,10 +3,6 @@
  * Copyright 2015 Aidan Feldman
  * Licensed under MIT (https://github.com/afeld/bootstrap-toc/blob/gh-pages/LICENSE.md) */
 
-nav[data-toggle="toc"] {
-    position: sticky;
-}
-
 nav[data-toggle=toc] .nav>li>a {
     display: block;
     padding: 4px 20px;
