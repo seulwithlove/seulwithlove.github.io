@@ -38,7 +38,14 @@ body{
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
+  // height: 100%;
+  // margin: 0;
 }
+
+// body {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 b,
 strong {
@@ -427,29 +434,68 @@ ul.task-list input[type="checkbox"] {
 // Social (bottom)
 
 .social {
+  flex-shrink: 0;
+  padding: 3rem 0;
   text-align: center;
+  background-color: #222222;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
 
-  .contact-icons {
-    font-size: 4rem;
+  .contact-icon {
+    font-size: 1rem;
+    display: inline-block;
+
+    .contact-separator,
+    h4 {
+      color: rgb(179, 179, 179);
+    }
 
     a {
-      i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
-      }
+      color: white;
 
       &:hover {
-        i::before {
-          color: var(--global-theme-color);
-        }
+        color: --global-theme-color;
       }
     }
+    
   }
 
   .contact-note {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
     font-size: 0.8rem;
+    color: #999;
   }
 }
+
+// // Social (bottom) - original
+
+// .social {
+//   text-align: center;
+
+//   .contact-icons {
+//     font-size: 4rem;
+
+//     a {
+//       i::before {
+//         color: var(--global-text-color);
+//         transition-property: all 0.2s ease-in-out;
+//       }
+
+//       &:hover {
+//         i::before {
+//           color: var(--global-theme-color);
+//         }
+//       }
+//     }
+//   }
+
+//   .contact-note {
+//     font-size: 0.8rem;
+
+//   }
+// }
 
 .wechat-modal {
   display: none;
@@ -508,8 +554,12 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
+  width: 100%;
+  
 
   .container {
+    width: 100%;
+    display: inline-block;
     text-align: center;
   }
 }
@@ -564,7 +614,7 @@ footer.sticky-bottom {
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 

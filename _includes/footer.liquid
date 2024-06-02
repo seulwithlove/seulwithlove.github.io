@@ -9,7 +9,7 @@
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
       {% endif %}
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+        <h6>Last updated: {{ 'now' | date: '%Y %b %d' }}</h6>
       {% endif %}
     </div>
   </footer>
@@ -19,12 +19,14 @@
       <div class="contact-icons">
         {% include social.liquid %}
       </div>
+      <!-- <div class="contact-note">
+        {{ site.contact_note }} 
+      </div> -->
       <div class="contact-note">
-        {{ site.contact_note }}
-      </div>
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+        Last updated: {{ 'now' | date: '%Y %b %d' }}
       {% endif %}
+      </div>
     </div>
   </footer>
 {% endif %}

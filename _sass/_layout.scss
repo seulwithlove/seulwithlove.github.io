@@ -60,12 +60,13 @@ body.fixed-top-nav {
 body.sticky-bottom-footer {
   // Remove padding below footer.
   padding-bottom: 0;
+  
 }
 
 .container {
   max-width: $max-content-width;
-  position: relative;
-  min-height: calc(100% - 20rem); // Footer=10rem, margin=5rem
+  // position: relative;
+  // min-height: calc(100% - 20rem); // Footer=10rem, margin=5rem
 }
 
 // Profile
