@@ -7,12 +7,47 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
+  h1{
+    font-size: 2.2rem; 
+    padding-bottom: 10px;
+    font-weight: 400;
+    scroll-margin-top: 66px;
+  }
+
+  h2{
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    scroll-margin-top: 66px;
+  }
+
+  h3{
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    scroll-margin-top: 66px;
+  }
+
+  h4{
+    font-size: 1.2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    scroll-margin-top: 66px;
+  }
+
+  h5{
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    scroll-margin-top: 66px;
+  }
+
   h6 {
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
     scroll-margin-top: 66px;
   }
 }
@@ -29,6 +64,8 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: $max-content-width;
+  position: relative;
+  min-height: calc(100% - 20rem); // Footer=10rem, margin=5rem
 }
 
 // Profile
@@ -36,6 +73,10 @@ body.sticky-bottom-footer {
   img {
     width: 100%;
   }
+}
+
+.giscus-container {
+  margin-top: 2rem;
 }
 
 // TODO: redefine content layout.

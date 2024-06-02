@@ -2,6 +2,10 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// import font 
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+
 // Typography
 
 p,
@@ -19,18 +23,71 @@ strong {
   color: var(--global-text-color);
 }
 
+html,
+body{
+  font-family: 'Gowun Dodum';
+  font-size: 1.05rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+  text-justify: inter-word;
+  hyphens: auto;
+  text-underline-position: under;
+  text-size-adjust: 100%;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+// table {
+//   td,
+//   th {
+//     font-size: 1rem;
+//   }
+
+//   th {
+//     font-weight: bold;
+//   }
+// }
+
 table {
-  td,
-  th {
-    font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  tr:nth-child(even) {
+    background-color: var(--global-bg-color-light);
   }
 
+  // table inside
+  td {
+    font-size: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: max-content;
+  }
+
+  // table header
   th {
-    font-weight: bold;
+    font-size: 1rem;
+    // border: 1px solid var(--global-divider-color);
+  }
+
+  tr {
+    // font-weight: bold;
+    font-size: 1.5rem;
+
+    border-bottom: 1px solid var(--global-divider-color);
   }
 }
 

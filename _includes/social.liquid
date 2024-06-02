@@ -1,3 +1,14 @@
+<span class="contact-icon text-center">
+    <!-- <h4>Contact Info</h4> -->
+    <h4>이 슬 Lee Seul</h4>
+    <a href="mailto:{{ site.email | encode_email }}" name="email link">
+      📩 Email</a>
+    <span class="contact-separator"> · </span>
+    {% if site.github_username %}<a rel="noopener" href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub">
+      🐙 Github</a>{% endif %}
+</span>
+
+<!--
 {% if site.email %}
   <a href="mailto:{{ site.email | encode_email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
 {% endif %}
@@ -127,4 +138,5 @@
     <img src="{{ site.wechat_qr | prepend: 'assets/img/' | relative_url }}" alt="WeChat QR" id="WeChatQR">
   </div>
   {% include scripts/wechatModal.liquid %}
-{% endif %}
+{% endif %} -->
+

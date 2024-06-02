@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: AIFFEL 아이펠 - 인공지능 전문가 부트캠프(업로드 예정)
+description: 아이펠 과정에서 진행한 퀘스트 모음
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: AI
 giscus_comments: true
 ---
 
