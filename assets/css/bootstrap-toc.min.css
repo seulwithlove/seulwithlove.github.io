@@ -33,6 +33,7 @@ nav[data-toggle=toc] .nav-link.active:hover {
 nav[data-toggle=toc] .nav-link+ul {
     display: none;
     padding-bottom: 10px;
+}
 
 nav[data-toggle=toc] .nav .nav>li>a {
     padding-top: 1px;
