@@ -11,17 +11,17 @@ toc:
   sidebar: left
 ---
 
-## SQLD - Week 5 - 실전문제 Part2 - 2. SQL 활용
+# SQLD - Week 5 - 실전문제 Part2 - 2. SQL 활용
 - <[SQL 자격검정 실전문제](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332583104)> (일명 노랭이) 개정판 1회독 + 오답노트
     - 출제 비중이 높은 Part 2 부터 시작
 - 오답노트하며 중요한 개념 정리
 
 
-### 51번
+## 51번
 - 서브쿼리 종류
 
 
-### 52번
+## 52번
 - UNION ALL
 - GROUPING SETS
 - ROLLUP
@@ -599,15 +599,15 @@ toc:
 - `GROUPING SETS`는 **지정한 컬럼에 대한 그룹연산 결과만** 출력
 - 반면, `ROLEUP`, `CUBE`는 **전체 그룹 연산**까지 출력함!
 
-### 55번
+## 55번
 - FK는 여러 개일수 있다는 점!
     - 단순히 PK와 FK가 같은 데이터를 찾으면 FK가 여러개인 경우 해당 데이터들이 모두 출력됨
 - *쿼리문 꼼꼼히 끝까지 해석하기!*
 
-### 56번
+## 56번
 - UNION은 무조건 중복데이터는 1개만 두고 나머지 삭제함!
 
-### 57번
+## 57번
 
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">SELECT</span><span style="color: #bbbbbb"> </span>b.grade,
 <span style="color: #bbbbbb">       </span>a.job,
@@ -1133,9 +1133,9 @@ toc:
 
 - ROLLUP 에 전달한 컬럼이 2개면 해당 컬럼들의 총합이 출력됨
 
-### 58번
+## 58번
 
-#### WINDOW FUNCTION 윈도우함수
+### WINDOW FUNCTION 윈도우함수
 
 ```sql
 SELECT 윈도우함수(대상) OVER([PARTITION BY 컬럼]
@@ -1146,11 +1146,11 @@ SELECT 윈도우함수(대상) OVER([PARTITION BY 컬럼]
 - OVER 절을 활용해서 그룹함수를 윈도우함수로 활용
 - PARTITION BY : 연산결과만 출력하는 / 그룹연산 수행할 GROUP BY 컬럼
 
-#### RATIO_TO_REPORT()
+### RATIO_TO_REPORT()
 - 비율을 계산
 
-### 60번
-#### 계층형 질의
+## 60번
+### 계층형 질의
 - 하나의 테이블 내 각 행끼리의 관계를 가질때, 연결고리로 행-행 사이의 계층을 표현
 - PRIOR 위치에 따라 연결 데이터가 달라짐
     ```sql

@@ -11,17 +11,17 @@ toc:
   sidebar: left
 ---
 
-## SQLD - Week 4 - Part2 - CH3. 관리구문
+# SQLD - Week 4 - Part2 - CH3. 관리구문
 - 유튜브 <[홍쌤의 데이터랩](https://www.youtube.com/@hdatalab)>, 강의자료 단권화
 - 책 <2023 유선배 SQL개발자(SQLD) 과외노트> 참고
 - 참고 : [블로그 Seung_story](https://seung-story.tistory.com/140)
 
-### 1. DML (Data Manipulation Language)
+## 1. DML (Data Manipulation Language)
 - 데이터 수정어
 - 반드시 commit(저장), rollback(취소)으로 transaction 제어해야함!!
 <br>
 
-#### INSERT
+### INSERT
 - 한 번에 한 행만 입력
   - 여러 행 한꺼번에 입력하려면 서브쿼리 활용
   - e.g. `INSERT INTO EMP3(EMPNO, ENAME, DEPTNO)`
@@ -41,7 +41,7 @@ INSERT INTO 테이블(컬럼1, 컬럼2, ...) VALUES(value1, value2, ...);
 - 숫자 컬럼에 문자값 입력 가능(권장X)
 
 
-#### UPDATE
+### UPDATE
 - 단일 컬럼 수정
   ```sql
   UPDATE 테이블명
@@ -55,7 +55,7 @@ INSERT INTO 테이블(컬럼1, 컬럼2, ...) VALUES(value1, value2, ...);
   WHERE 조건;
   ```
 
-#### DELETE
+### DELETE
 ```sql
 DELETE [FROM] 테이블명
 [WHERE 조건];
@@ -63,7 +63,7 @@ DELETE [FROM] 테이블명
 - FROM 생략 가능 
 - WHERE 조건 전달안할경우 모든 행 삭제 됨
 
-#### MERGE
+### MERGE
 - 병합 : 참조 테이블 필수
 ```sql
 MERGE INTO 테이블명
@@ -77,7 +77,7 @@ WHEN NOT MATCHED THEN
 ```
 
 
-### 2. TCL (Transaction Control Language)
+## 2. TCL (Transaction Control Language)
 - 트랜잭션 제어어
 - DML(UPDATE, INSERT, DELETE)에서 많이 사용
   - DDL은 AUTO COMMIT
@@ -89,30 +89,30 @@ WHEN NOT MATCHED THEN
       - 트랜잭션이 수행하는 동안 특정 데이터에 대해 다른 트랜잭션이 동시에 접근하지 못하게 제한 
   - 지속성(durability) : 트랜잭션이 성공적으로 수행되면 갱신한 데이터베이스 내용이 영구적으로 저장
 
-#### COMMIT
+### COMMIT
 - 데이터 저장 : 데이터베이스 변경시 올바르게 반영된 데이터를 데이터베이스에 반영
 - COMMIT 하고 나면 되돌릴수 없음 
 - DDL하면 AUTO COMMIT : 되돌릴수 없음(23c 버전부터 비활성화 가능)
 
-#### ROLLBACK
+### ROLLBACK
 - 데이터 원복 : 트랜잭션 시작 이전 상태로 돌림
 - 시점이 매우 중요! : 최종 COMMIT 시점/변경 전/특정 SAVEPOINT 시점
 
-#### SAVEPOINT 
+### SAVEPOINT 
 - 트랜잭션 시점
 - 책갈피처럼 끼워두는 곳(COMMIT전)
   - 원하는 이름으로 설정 가능
 
-### 3. DDL (Data Definition Language)
+## 3. DDL (Data Definition Language)
 - 데이터 구조 정의어(객체 생성, 삭제, 변경)
 - AUTO COMMIT 특성 : 명령어 수행하면 즉시 저장/원복 불가
 
-#### CREATE
+### CREATE
 - 객체 생성(테이블/인덱스)
 - 명령어 전달 순서대로 생성
 - 테이블 생성시 소유자 명시 가능
 
-##### 데이터 타입
+#### 데이터 타입
 - CHAR(n) : 고정형 문자
   - 사이즈
 - VARCHAR2(n)
@@ -124,10 +124,10 @@ WHEN NOT MATCHED THEN
 	- NUMBER → VARCHAR2
 	- DATE → VARCHAR2
 
-#### ALTER
+### ALTER
 - 테이블 구조 변경
 
-##### 1. ADD 컬럼추가
+#### 1. ADD 컬럼추가
 
 ```sql
 ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
@@ -141,7 +141,7 @@ ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
   - SQL Server는 여러 컬럼 동시 수정X (괄호 사용X) 
 
 
-##### 2. MODIFY 변경
+#### 2. MODIFY 변경
 - 여러 컬럼 동시 변경 가능
 <br>
 - 컬럼 사이즈
@@ -152,9 +152,9 @@ ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
   - NULL로 채우고 싶은 경우 DEFAULT 대신 NULL 입력
   - 기존에 있는 데이터에는 영향X -> 새로 입력되는 데이터부터 영향
 
-##### 3. RENAME : 컬럼명 변경
+#### 3. RENAME : 컬럼명 변경
 
-##### 4. DROP COLUMN : 컬럼 삭제
+#### 4. DROP COLUMN : 컬럼 삭제
 - `ALTER TABLE table_name DROP COLUMN column_name;`
 
 **[DELETE - DROP - TRUNCATE]**
@@ -166,13 +166,13 @@ ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
 - TRUNCATE : 구조 남기고 데이터만 즉시 삭제 - 롤백 불가(AUTO COMMIT)
 
 
-#### 제약조건
+### 제약조건
 - 데이터 무결성을 위해 각 컬럼에 생성하는 데이터 제약 장치
 - UNIQUE : 중복 허용X
 - NULL
 - NOT NULL
 
-##### PRIMARY KEY(PK) 기본키
+#### PRIMARY KEY(PK) 기본키
 - 유일한 식별자(각 행을 구별할수 있는 식별자 기능)
 - **UNIQUE + NOT NULL**
   - PRIMARY KEY 생성하면 NOT NULL 속성 자동 부여
@@ -211,7 +211,7 @@ ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
   ADD CONSTRAINT constraint_name PRIMARY KEY (column_name);
   ```
 
-##### FOREIGN KEY
+#### FOREIGN KEY
 - 자식테이블에 거는 장치
 - 부모 테이블을 참조하면서 관리
 - CREATE TABLE 때 생성
@@ -268,7 +268,7 @@ ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
     ```
 
 
-#### 기타 오브젝트 : View 뷰
+### 기타 오브젝트 : View 뷰
 ```sql
 CREATE [OR REPLACE] VIEW 뷰이름
 AS
@@ -288,9 +288,9 @@ AS
 	- 수정 불가
 	- 인덱스 구성 불가
 
-### 4. DCL (Data Control Language)
+## 4. DCL (Data Control Language)
 - 데이터 제어어 : "권한"으로 통제!
-#### 권한 종류
+### 권한 종류
 - 오브젝트 권한 : 테이블에 대한 권한(SELECT, INSERT, UPDATE, DELETE, MERGE)
   - 테이블 소유자는 소유 테이블 조회/수정 권한 부여/회수 가능
 - 시스템 권한 : 시스템 작업(테이블 생성, 인덱스 삭제)
@@ -302,14 +302,14 @@ AS
   - <u>ROLE을 통해 부여한 권한은 직접 회수 X</u>
     - ROLE을 통한 회수만 가능
 
-#### GRANT : 권한 부여
+### GRANT : 권한 부여
 `GRANT 권한 ON 테이블명 TO 유저;`
 - 동시에 여러 권한 부여 가능
 - 동시에 여러 유저에게 권한 부여 가능
 - 동시에 여러 객체(테이블)에 대한 권한 부여 X
   - 옵션 설정 안하면 기본값은 : `WITH GRANT OPTION`
 
-#### REVOKE : 권한 회수
+### REVOKE : 권한 회수
 `REVOKE 권한 ON 테이블명 FROM 유저;`
 - 동시에 여러 권한 회수 가능
 - 동시에 여러 유저로부터 권한 회수 가능
@@ -325,7 +325,7 @@ AS
   - 중간관리자 권한 회수 : 제3자에게 부여된 권한 함께 회수 X(남아있음)
 
 
-### 종합
+## 종합
 
 | 명령어 종류         | 명령어        | 설명             |
 |----------------|-----------------------------------|----------------|

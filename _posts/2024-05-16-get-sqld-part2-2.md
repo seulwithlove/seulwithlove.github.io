@@ -11,17 +11,17 @@ toc:
   sidebar: left
 ---
 
-## SQLD - Week 4 - Part2 - CH2. SQL 활용
+# SQLD - Week 4 - Part2 - CH2. SQL 활용
 - 유튜브 <[홍쌤의 데이터랩](https://www.youtube.com/@hdatalab)>, 강의자료 단권화
 - 책 <2023 유선배 SQL개발자(SQLD) 과외노트> 참고
 - 참고 : [Microsoft Learn](https://learn.microsoft.com/en-us/sql/t-sql/functions/grouping-transact-sql?view=sql-server-ver16), [블로그 superkong1](https://superkong1.tistory.com/42), [블로그 ooo](https://n-o-t-e.tistory.com/42)
 
-### 1. Subquery 서브쿼리
+## 1. Subquery 서브쿼리
 - 하나의 SQL 문 안에 포함되어있는 또다른 SQL문
 - 꼭 ( ) 괄호로 묶어야 함!
 - GROUP BY 절은 사용 X
 
-#### 종류
+### 종류
 **1. 동작하는 방식에 따라**
 - 비연관(UN-CORRELATED) 서브쿼리
   - 서브쿼리가 메인쿼리 컬럼을 가지고 있지 않은 형태
@@ -41,7 +41,7 @@ toc:
 - WHERE 절 서브쿼리 : 가장 일반적인 사용
   - 비교 상수 자리에 '값을 전달'하기 위한 목적(상수항 대체)
 
-#### WHERE 절 서브쿼리 종류
+### WHERE 절 서브쿼리 종류
 **1) 단일행 서브쿼리**
 - 서브쿼리 결과로 1행이 리턴
 - 단일행 서브쿼리 연산자 종류
@@ -77,26 +77,26 @@ toc:
   - `IN` 만 사용가능
 - SQL Server 사용X
 
-### 2. 집합 연산자
+## 2. 집합 연산자
 - 두 집합의 컬럼이 동일하게 구성되어야함
   - 각 컬럼의 데이터 타입
   - 컬럼 순서
   - 컬럼 수
 - 컬럼 사이즈는 달라도 됨
 
-#### UNION / UNION ALL : 합집합
+### UNION / UNION ALL : 합집합
 - UNION : 중복된 데이터 제거, **자체 정렬**
   - 중복된 데이터 없으면 UNION ALL 사용! : 불필요한 정렬하므로
 - UNION ALL : 중복된 데이터도 전체 출력
 
-#### INTERSECT : 교집합
+### INTERSECT : 교집합
 - 공통으로 있는 행 출력
 
-#### MINUS : 차집합
+### MINUS : 차집합
 - 순서 중요함!
 
 
-### 3. 그룹 함수
+## 3. 그룹 함수
 - 반드시 한 컬럼만 전달
 - 컬럼값이 NULL인 Row 제외(무시)
 - GROUP BY 절에 의해 그룹별 연산 결과 리턴
@@ -110,10 +110,10 @@ toc:
   - 날짜, 숫자, 문자 모두 가능(오름차순 순서대로)
 - VARIANCE / STDDEV : 분산, 표준편차
 
-### GROUP BY FUNCTION
+## GROUP BY FUNCTION
 - 여러 GROUP BY 결과를 동시에 출력(합집합)
 
-#### GROUPING SETS(A, B, ...)
+### GROUPING SETS(A, B, ...)
 - A, B별 그룹 연산 결과 출력
   - GROUPING SETS에 나열한 대상에 대해 각 GROUP BY 결과를 출력
 - 나열 순서 중요하지X
@@ -123,7 +123,7 @@ toc:
 - GROUPING SETS ((A, B)) = GROUP BY A, B
   - 괄호를 두개 사용하면 A, B를 그룹으로 만들어서 그룹 소계를 집계
 
-#### ROLLUP(A, B) 
+### ROLLUP(A, B) 
 - 주어진 컬럼명 나열순을 기준으로 레벨별 집계를 반환
 	- (A, B)별, A별(B는 NULL로 집계), 전체 그룹 연산 결과 출력
 - 나열 대상의 **순서** 중요!
@@ -132,12 +132,12 @@ toc:
 - ROLLUP ((A, B)) 
   - 이런 식으로 괄호를 두 번 감싸면 컬럼별 집계와 전체 집계만 출력 가능
 
-#### CUBE(A,B) 
+### CUBE(A,B) 
 - 모든 조합의 경우의 수 모두 출력
 - 나열 대상의 순서 중요X
 - UNION ALL, GROUPING SETS로 대체 가능
 
-#### GROUPING()
+### GROUPING()
 - Microsoft Learn의 SQL Server 페이지 설명은 다음과 같음
 > Indicates whether **a specified column expression in a GROUP BY list is aggregated or not.**<br> GROUPING returns 1 for aggregated or 0 for not aggregated in the result set.<br>GROUPING can be used only in the SELECT \<select> list, HAVING, and ORDER BY clauses when GROUP BY is specified.
 - 공식 정의에 따르면 '**GROUP BY 절에서 지정한 컬럼**에 대한 **집계생성 여부**를 반환한다'는 의미
@@ -153,7 +153,7 @@ toc:
 
   
 
-### 4. 윈도우 함수
+## 4. 윈도우 함수
 - 서로 다른 행의 비교나 연산을 위해 만든 함수
 	- GROUP BY 안쓰고 그룹 연산
 - **OVER** 절 필수!
@@ -174,7 +174,7 @@ toc:
 
 <br>
 
-#### 연산 범위 설정 가능
+### 연산 범위 설정 가능
 - ROWS / RANGE
   - ROWS : 값이 같더라도 각 행씩 연산
   - RANGE : 같은 값의 경우 하나의 RANGE로 묶어서 동시 연산
@@ -193,7 +193,7 @@ toc:
       - 해당 파티션 영역의 가장 마지막 행
     - N **FOLLOWING** : N 이후까지
 
-#### 순위 관련
+### 순위 관련
 - *비교문제 많이 나옴!*
 <br>
 - RANK(값) : 특정 값에 대한 순위 확인
@@ -207,7 +207,7 @@ toc:
 - ROW_NUMBER : 연속된 행 번호
   - 동순위 인정X, 나열한 순서대로의 값 출력(동순위 없이 순서-1, 2, 3...)
 
-#### 비교 관련
+### 비교 관련
 - **LAG, LEAD** : 행순서대로 각각 이전 값(LAG), 이후 값(LEAD) 가져옴
   - **ORDER BY** 절 필수
     - e.g. 바로 이전 입사자와 급여 비교
@@ -220,7 +220,7 @@ toc:
   - 그룹 번호 리턴
   - **ORDER BY** 절 필수
 
-#### 비율 관련
+### 비율 관련
 - *시험 자주 출제*
 <br>
 - RATIO_TO_REPORT : 각 값의 비율 리턴
@@ -235,7 +235,7 @@ toc:
   - **ORDER BY** 절 필수
 
 
-### 5. TOP N QUERY
+## 5. TOP N QUERY
 - 전체 결과에서 특정 N개 추출
 - ROWNUM : 출력 데이터 기준으로 행 번호 부여
   - 특정 행 지정X
@@ -243,7 +243,7 @@ toc:
 - RANK
 - FETCH : 출력될 행의 수 제한
 
-### 6. 계층형 질의
+## 6. 계층형 질의
 - 하나의 테이블 내 각 행끼리의 관계를 가질때, 연결고리로 행-행 사이의 계층을 표현
 - PRIOR 위치에 따라 연결 데이터가 달라짐
 	- 오라클 계층형 질의문에서 PRIOR 키워드는 SELECT, WHERE 절에서도 사용가능!
@@ -264,25 +264,25 @@ toc:
 	- CONNECT BY절의 PRIOR 바로 다음에 있는 컬럼을 기준으로 '=' 이후의 컬럼과 맞췄을때 같은 데이터가 있는 행이 LEVEL 2
 
 
-#### 계층형 질의 가상 컬럼
+### 계층형 질의 가상 컬럼
 - LEVEL : 각 DEPTH 를 표현(시작점부터 1)
 - CONNECT_BY_ISLEAF : LEAF NODE(최하위노드) 여부
   - 참:1, 거짓:0
 
-#### 계층형 질의 가상 함수
+### 계층형 질의 가상 함수
 - CONNECT_BY_ROOT 컬럼명 : 루트노드의 해당 컬럼명의 값이 출력
 - SYS_CONNECT_BY_PATH(컬럼, 구분자) : 이어지는 경로 출력
 - ORDER SIBLINGS BY 컬럼 : 같은 LEVEL 일 경우 정렬 수행
 
 
-### 7. PIVOT / UNPIVOT
+## 7. PIVOT / UNPIVOT
 - 데이터 구조를 변경하는 기능
 - LONG DATA : 하나의 속성 = 하나의 컬럼
 - WIDE DATA : 하나의 속성값이 여러 컬럼으로 분리되어 표현
   - JOIN 연산 불가
   - 값이 추가될때마다 컬럼 추가되야함(비효율적)
 
-#### PIVOT
+### PIVOT
 - LONG -> WIDE
   - 교차표를 만드는 기능
 - STACK, UNSTACK, VALUE 컬럼 정의 중요!
@@ -291,7 +291,7 @@ toc:
 - PIVOT 절에는 : UNSTACK, VALUE 컬럼명 정의
   - PIVOT 절에 선언한 UNSTACK, VALUE 컬럼 제외한 모든 컬럼이 STACK 컬럼이 됨!
 
-#### UNPIVOT 
+### UNPIVOT 
 - WIDE -> LONG
 - 만들고 싶은 STACK, VAUE 컬럼 지정 : 컬럼명 전달
 - value1, value2 ... : 실제 UNSTACK 되어있는 컬럼명 
@@ -304,7 +304,7 @@ toc:
   - 숫자 전달할 경우(UNSTACK 데이터 컬럼명이 숫자인 경우) **" " 쌍따옴표**로 전달
   - 문자 - 대명사(객체 이름)은 쌍따옴표 붙이지 X
 
-### 8. 정규 표현식
+## 8. 정규 표현식
 - 문자열의 공통된 규칙을 일반화하여 표현
   - 규칙을 찾아내면 일일이 문자를 나열하지 않아도 되는 장점
 - `\d`: 숫자 - `\D` : 숫자 아닌것

@@ -11,13 +11,13 @@ toc:
   sidebar: left
 ---
 
-## SQLD - Week 5 - 실전문제 Part2 - 2. SQL 활용
+# SQLD - Week 5 - 실전문제 Part2 - 2. SQL 활용
 - <[SQL 자격검정 실전문제](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332583104)> (일명 노랭이) 개정판 1회독 + 오답노트
     - 출제 비중이 높은 Part 2 부터 시작
 - 오답노트하며 중요한 개념 정리
 
 
-### 61번
+## 61번
 - 계층형 질의에서 루트노드는 **LEVEL 1**부터 시작
     - START WITH 절에 해당하는 행은 조건절과 상관없이 결과에 출력됨
 - START WITH 에서 지정한 행을 LEVEL 1로 지정
@@ -27,7 +27,7 @@ toc:
     - 남은 6명 모두 LEVEL 2 => 매니저만 두고 모두 동일 레벨
 
 
-### 64번
+## 64번
 - WHERE 절은 계층형질의 전개 완료후에 필터링하기위한 조건절
     - 4번 FROM 절 안의 1)서브쿼리에서 
         - START WITH 2)서브쿼리 의 'START WITH~' 전개 후에 나오는 결과에서 
@@ -36,7 +36,7 @@ toc:
 - LEFT OUTER JOIN - ON 이랑 세트
 - *한 세트(묶음끼리)를 잘 구분해서 정리*
 
-### 65번
+## 65번
 - *문제에서 테이블을 직접 만드는 경우 대략적으로 결과테이블 그려놓기*
 
 
@@ -209,12 +209,12 @@ toc:
 - NATURAL JOIN : 조인조건 없이 컬럼명이 같을때 사용
 	- 조인조건 생략시 두 테이블에 같은 컬럼 이름이 있는 행을 연결(출력)
 
-### 66번
+## 66번
 - 셀프조인 SELF JOIN
     - 테이블의 행을 하나씩 만들어감
 
-### 69번
-#### 윈도우함수
+## 69번
+### 윈도우함수
 - RANK : 전체/특정 그룹 중 값의 순위
     - 값이 같으면 동일한 순위
     - 다음 순위는 동순위 개수에 따라 순위 부여
@@ -234,22 +234,22 @@ toc:
     - ORDER BY 필수
 
 
-### 70번
+## 70번
 - HAVING : GROUP BY 절의 필터링 조건절
 
-#### SELECT 1
+### SELECT 1
 - 해당 테이블의 값을 1로 리턴
 - WHERE 절에서 사용할 경우 조건을 만족하면 1 리턴
   - `WHERE EXISTS (SELECT 1 ...)`
 - 실제값이 아닌 '**존재 유무**'가 중요할때 사용
 
-#### 'WHERE 0 <'의미
+### 'WHERE 0 <'의미
 - 서브쿼리에서 리턴하는 행이 있는지를 확인하기 위함
 - 리턴하는 행이 있으면 True : 해당 조건의 행 출력
 - 리턴하는 행이 없으면 False : 아무행도 출력하지 X
 
 
-### 77번
+## 77번
 
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">SELECT</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span>
 <span style="color: #008000; font-weight: bold">FROM</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">사원</span>
@@ -491,7 +491,7 @@ toc:
 </div>
 
 
-#### `ROWS BETWEEN A AND B` 구문 파헤쳐보기
+### `ROWS BETWEEN A AND B` 구문 파헤쳐보기
 - UNBOUNDED PRECEDING, CURRENT ROW를 어떻게 구분하지? 현재 시점과 처음 시점은 어디를 기준으로 잡을까?
 
 
@@ -756,8 +756,8 @@ toc:
     - = `ROWS BETWEEN CURRENT ROW AND CURRENT ROW`
 - 결국 현재 행 내에서 MAX(연봉)을 구하기때문에 해당 행의 연봉이 그대로 출력된다
 
-### 78번
-#### GROUPING 함수
+## 78번
+### GROUPING 함수
 - [Microsoft Learn의 SQL Server 페이지 설명](https://learn.microsoft.com/en-us/sql/t-sql/functions/grouping-transact-sql?view=sql-server-ver16)은 다음과 같음
 > Indicates whether **a specified column expression in a GROUP BY list is aggregated or not.**<br> GROUPING returns 1 for aggregated or 0 for not aggregated in the result set.<br>GROUPING can be used only in the SELECT \<select> list, HAVING, and ORDER BY clauses when GROUP BY is specified.
 - 공식 정의에 따르면 'GROUP BY 절에서 지정한 컬럼에 대한 집계생성 여부를 반환한다'는 의미
@@ -773,7 +773,7 @@ toc:
     
 - *MIN(B.지역명)은 아직 이해가 안됨...😣*
 
-### 79번
+## 79번
 
 
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #008000; font-weight: bold">SELECT</span><span style="color: #bbbbbb"> </span>empno,
@@ -793,11 +793,11 @@ toc:
     Help: https://docs.oracle.com/error-help/db/ora-01427/
 
 
-### 80번
+## 80번
 - *GROUP BY FUNCTION 종류별로 정리 꼼꼼히!!*
     - 여러 GROUP BY 결과를 동시에 출력(합집합)
     
-#### GROUPING SETS(A, B, ...)
+### GROUPING SETS(A, B, ...)
 - A, B별 그룹 연산 결과 출력
     - GROUPING SETS에 나열한 대상에 대해 **각 GROUP BY 결과**를 출력
 - 나열 순서 중요하지X
@@ -805,19 +805,19 @@ toc:
     - 전체 총계 출력하려면 : NULL 혹은 `()` 사용 
 - '= UNION ALL' : 빈 컬럼 NULL로 맞춰줘야함
     
-#### ROLLUP(A, B) 
+### ROLLUP(A, B) 
 - A별, (A, B)별, 전체 그룹 연산 결과 출력
 - 나열 대상의 **순서** 중요!
     - 나열된 컬럼의 계층 구조로 집계 출력
 - UNION ALL로 대체 가능 : 빈 컬럼 NULL로 맞춰줘야함
 
-#### CUBE(A,B) 
+### CUBE(A,B) 
 - A별, (A, B)별, 전체 그룹 연산 결과 출력
 - 모든 조합의 경우의 수 모두 출력
 - 나열 대상의 순서 중요X
 - UNION ALL, GROUPING SETS로 대체 가능
 
-### 82번
+## 82번
 - 원래 ROLLUP (JOB, DEPTNO)를 하면 다음처럼 주어진 컬럼명 나열순을 기준으로 레벨별 집계가 반환된다
 
 
@@ -1058,7 +1058,7 @@ toc:
 
 - 문제에서는 평균값을 출력하는 행 하나만 있기때문에 괄호 2개로 전체 총합 소계만 출력하는게 필요
 
-### 83번
+## 83번
 - `GROUPING SETS ((A, B))` : A, B 두개의 컬럼을 그룹으로 만들어 소계를 집계
     - `GROUP BY A, B` 와 동일한 결과
 - 참고 : [블로그](https://gent.tistory.com/279)
@@ -1342,19 +1342,19 @@ toc:
 </div>
 
 
-### 85번
+## 85번
 - RANK : 동순위 데이터 수에 따라 다음 순위 결정됨
 - DENSE_RANK : 누적순위 - 동순위 다음 순위가 바로 이어짐
 - ROW_NUMBER : 연속된 행번호 - 동순위 인정X, 나열 순서대로 순서 값 출력
 
-### 90번
-#### LAG
+## 90번
+### LAG
 - 바로 이전 행 결과 출력
-#### LEAD
+### LEAD
 - 바로 다음 행 결과 출력
 
-### 91번
-#### 권한 부여 옵션 - 중간관리자 권한
+## 91번
+### 권한 부여 옵션 - 중간관리자 권한
 - **WITH GRANT OPTION** : <u>오브젝트 권한을 다른 사용자에게 부여</u> -> 이 사용자는 `중간관리자`가 됨
   - 중간관리자가 부여한 권한은 중간관리자만 회수 가능 
   - 중간관리자에게 부여된 권한 회수 시 제 3 자에게 부여된 권한도 함께 회수됨
@@ -1364,12 +1364,12 @@ toc:
   - 중간관리자 권한 회수 : 제3자에게 부여된 권한 함께 회수 X(남아있음)
 
 
-### 96번
+## 96번
 - INTERSECT : SQL 결과에 대한 교집합 출력
     - 중복된 행은 하나만 출력
 
-### 97번
-#### LAG
+## 97번
+### LAG
 - `LAG (scalar_expression [, offset [, default ]]) OVER ( [ partition_by_clause ] order_by_clause)`
     - offset : The number of rows back from the current row from which to obtain a value. If not specified, the default is 1.
 - 출처 : [Geeksforgeeks](https://www.geeksforgeeks.org/sql-server-lag-function-overview/)
