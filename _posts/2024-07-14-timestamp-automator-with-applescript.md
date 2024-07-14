@@ -3,7 +3,7 @@ layout: post
 title: 맥OS에서 applescript를 활용해 타임스탬프 단축키로 추가하기
 date: 2024-07-14
 description: 맥에서 단축키로 타임스탬프 추가하는 방법
-tags: mac automator applescript
+tags: mac automator applescript timestamp
 categories: playing
 giscus_comments: true
 related_posts: false
@@ -19,10 +19,10 @@ Alfred의 Workflows 기능을 사용해서 쉽게 단축키로 타임스탬프�
 ## 1. Automator 설정
 - Automator 어플리케이션 실행 (spotlight로 검색!)
 - New Documnet > type : Quick Action<br>
-  <img src="https://github.com/user-attachments/assets/c5f4bd39-eac1-4e21-bdc1-26e7b1592bdc" width=80%>
-  <img src="https://github.com/user-attachments/assets/89df3fd5-4bca-455d-a726-cda26a155354" width=80%>
-- 'Run AppleScript' 액션을 찾아서 선택<br>
-  <img src="https://github.com/user-attachments/assets/1a979817-7db7-4831-939b-0a3f3c7ad119" width=80%>
+  ![1 new_document](https://github.com/user-attachments/assets/92e5ff06-e294-451f-8ab9-48bcb6bcabab){: width="60%"}
+  ![2 type_quick_action](https://github.com/user-attachments/assets/ba1d11de-16c8-4bcc-94d2-0f0b2f26d736){: width="90%"}
+- 'Run AppleScript' 액션을 검색후 선택(더블클릭)<br>
+  ![3 find_run_applescript](https://github.com/user-attachments/assets/2e68af1b-15d7-44f0-a2d1-e278bbfd2981){: width="90%"}
 - 아래 script 작성
   ```applescript
   -- Insert formatted Date and Time into your documents
@@ -41,19 +41,19 @@ Alfred의 Workflows 기능을 사용해서 쉽게 단축키로 타임스탬프�
   end tell
   ```
 - 나머지 설정은 아래 사진과 동일하게 선택하고 'Run' 버튼으로 실행해서 오류 없는지 확인<br>
-  <img src="https://github.com/user-attachments/assets/9b946475-2902-43e6-ba1d-702601b800aa" width=80%>
+  ![4 write_script_and_run](https://github.com/user-attachments/assets/919336a0-7037-4812-9013-a2fb0729a662){: width="90%"}
 - Quick Action 저장
 
 ## 2. 키보드 단축키 설정
 - Settings > Keyboard > Keyboard Shortcuts > Services 
 - General > 위에서 저장한 'Automator action' 체크 > 단축키 설정
   - 단축키는 기존 시스템 혹은 다른 어플리케이션 단축키와 겹치지 않는 **고유한 단축키**로 설정<br>
-  <img src="https://github.com/user-attachments/assets/fc0b4dfd-f6be-4dd3-88e2-1df8369e4e83" width=80%>
+  ![5 set_keyboard_shorcut](https://github.com/user-attachments/assets/f5c0ffda-09ab-4d66-944d-402d35ae55b4){: width="80%"}
   
 ## 3. Quick Action 사용할 어플리케이션 권한 설정
 - Settings > Privacy & Security > Accessibillity 
 - Quick Action을 사용할 어플리케이션 선택해서 권한 추가<br>
-  <img src="https://github.com/user-attachments/assets/70a69046-9144-4cc5-a8c2-fe835befb6fd" width=80%>
+  ![6 set_accessibility](https://github.com/user-attachments/assets/b20cfc4f-21de-4433-8693-91708fac6ca4){: width="80%"}
 
 ## 4. 단축키로 타임스탬프 추가
 - `2024-07-14 Sunday, 22:54`
