@@ -98,8 +98,7 @@ toc:
 - RDBMS를 사용하기 위해 pgAdmin4 혹은 SQL Developer를 이용해도 되지만 **DBeaver**를 사용해보기로 결정! 
 - 특징
   > DBeaver Community is a **free cross-platform database tool** for developers, database administrators, analysts, and **everyone working with data**. It **supports all popular SQL databases** like <u>MySQL, MariaDB, PostgreSQL, SQLite, Apache Family</u>, and more. 
-  > &nbsp; &nbsp;[DBeaver Community](https://dbeaver.io/)
-  
+
   - 여러가지 데이터베이스(Oracle, PostgreSQL, MySQL, A...)를 지원하는 통합 데이터베이스 툴
   - 오픈소스
   - 직관적인 인터페이스
