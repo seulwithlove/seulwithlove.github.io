@@ -326,6 +326,10 @@ progress {
     -webkit-appearance: button
 }
 
+output {
+    display: inline-block
+}
+
 summary {
     display: list-item;
     cursor: pointer
