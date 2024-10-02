@@ -17,7 +17,7 @@ toc:
 - Mac에서 Oracle DB 사용하도록 환경 세팅
   - 참고자료 :<br>
   Blog - [함함ː](https://intheham.tistory.com/23), [사자](https://velog.io/@devsaza/M1-M2-Mac-OS%EC%97%90%EC%84%9C-Oracle-DB-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0), [Shane's planet](https://shanepark.tistory.com/), [wheezy](https://velog.io/@wheezy_han/DBeaver), [김상웅](https://velog.io/@sangwoong/Database-DBeaver), <br>
-  [DBeaver Community](https://dbeaver.io/)
+  DBeaver Community
 - 책 <2023 유선배 SQL개발자(SQLD) 과외노트>로 기본 이론 단권화
   - 챕터 3 정리
   - 유튜브 <[홍쌤의 데이터랩](https://www.youtube.com/@hdatalab)>, 강의자료 참고
