@@ -44,7 +44,7 @@ toc:
     - **A candidate key** is **a key that uniquely identifies rows in a table.** 
     - Any of the identified candidate keys <u>can be used as the table's primary key.</u> 
     - Candidate keys that are not part of the primary key are called alternate keys. 
-        - 출처 : [oraclefaq](https://www.orafaq.com/wiki/Candidate_key)
+        - 출처 : oraclefaq
 - Alternate key: a candidate key that is not the primary key.
 - Unique key: an attribute that can be unique on the table. Can also be called an alternate key.
 - Foreign key(외래키): an attribute that is used to refer to another record in another table.
