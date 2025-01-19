@@ -1,80 +1,84 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: 정책연대기 - 서울
+description: 서울시의 운영 종료된 공공 정책 데이터를 수집·분석하여 사라지는 정책 기록을 남기고자 한 데이터 액티비즘 프로젝트
+img: /assets/img/deseba_main.jpg
+importance: 1
+category: Civic-hacking
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>목 차</summary>
+  <ol>
+    <li>
+      <a href="#프로젝트-소개">프로젝트 소개</a>
+      <ul>
+        <li><a href="#프로젝트-과정">프로젝트 과정</a></li>
+        <li><a href="#데이터-수집">데이터 수집</a></li>
+      </ul>
+    </li>
+    <li><a href="#프로젝트-결과">프로젝트 결과</a></li>
+    <li><a href="#기여한-사람들">기여한 사람들</a></li>
+  </ol>
+</details>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## 프로젝트 소개
+> 연대기 年代記 <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;역사적으로 중요한 사건을 연대순으로 적은 기록 <small>(표준국어대사전)</small>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<br>
+길고 가는 인연을 이어가는 길가모임이 2024.7.7 부터 12.8 까지 진행한, 빠띠 '시민 데이터 액티비즘 프로젝트 <[데이터로 세상을 바꾸자](https://pass.campaigns.do/posts/VntRj2)>' 참여 프로젝트
+<br>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+---
+<br>
+서울시의 여러 공공 정책이 매년 조용히 사라집니다. 운영 종료되는 정책은 얼마나 되는지, 어떤 사유로 종료되는지, 관련 공지는 어디서 확인할 수 있는지 궁금해졌습니다. 이를 알아보기 위해 서울시가 2016년부터 2024년까지 운영 종료한 정책 데이터를 수집하고 분석했습니다.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+## 프로젝트 과정
+### 프로젝트 배경
+서울시 은평구의 서울혁신파크는 2015년 개방 이후 시민사회단체와 예술단체의 사회문제 해결을 위한 실험 공간이자, 시민들의 휴식처이며 계절별 문화행사가 열리는 공원이었습니다.
+
+현 서울시장 취임 후 서울시는 서울혁신파크를 철거하고 대형복합쇼핑몰로 개발하겠다는 계획을 발표했으며, 현재 혁신파크 부지의 민간 매각을 진행 중입니다. 서울시는 2022년 12월 21일 [서울시 홈페이지 공공건축물 관련소식](https://news.seoul.go.kr/citybuild/archives/518665)에 서울혁신파크 재개발 계획을 발표하는 글의 일부에서 다음과 같이 설명합니다.
+
+> □ 서울시가 소유한 최대 규모의 가용지이지만 지난 10년 간 폐쇄적으로 이용되며 활용도가 떨어졌던 은평구 녹번동 '서울혁신파크' 부지 약 11만㎡가 서울 서북권 발전을 견인할 신(新) 경제생활문화 중심으로 재탄생한다.<br>
+> <br>
+> ○ '서울혁신파크' 부지는 불광역 바로 옆, 축구장 15개 크기에 맞먹는 금싸라기 땅으로, 서울시가 가진 활용가능한 시유지 중 규모가 가장 큰 소중한 공간자산이다.<br>
+> <br>
+> ○ 이곳은 원래 국립보건원 부지였는데, 국립보건원 이전(2006년)으로 무분별한 난개발이 이뤄지는 것을 막고 서북권 지역에 필요한 시설을 공급하기 위해 오세훈 시장 재임 당시인 지난 2009년 시가 해당 부지를 전격 매입했다. <br>
+> **그러나 당초 목적과 달리 지난 10년 간 일부 단체에 의해 저밀도로 이용되면서 부지의 잠재력에 걸맞은 거점 역할을 수행하지 못했다.**<br>
+
+<p align="center"><strong>이 한 줄의 문장이 10년간 운영해 온 시설의 운영종료 사유로 타당할까요?</strong></p>
+
+서울시는 운영 종료를 결정한 후 입주기업과 시민들에게 공간 폐쇄를 통보했습니다. 서울혁신파크 홈페이지는 예정된 서울혁신파크 운영 종료일(2023년 12월 31일)보다 앞선 2023년 12월 4일에 폐쇄되었습니다. 정책이 종료되는 과정은 일방적이고 폐쇄적이며 갑작스럽게 이루어졌습니다.
+
+<div style="text-align: center;">
+    <img src="/assets/img/innovation_park.png" alt="서울혁신파크 홈페이지 종료 안내 문구" style="width:70%; height: auto;">
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+<br>
+<br>
 
-{% raw %}
+이처럼 사라지는 공공 정책이 또 있을까요? 사라지는 정책들의 데이터를 수집하고, 완전히 사라지기 전에 그 기록을 남기고자 했습니다.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+<br>
 
-{% endraw %}
+---
+
+### 데이터 수집
+- 서울시, 구청, 정책 운영 기관의 홈페이지에서 '운영 종료', '폐관' 등의 키워드를 활용해 검색
+- 구글, 네이버, 빅카인즈 등 구글링
+- 정보공개청구
+- 서울시 예산내역 검토 - 이전년도와 비교해 예산 삭감된 정책 확인
+길가모임의 3인이 데이터를 수집하고, 빠띠가 주최한 오픈데이터톤에서 만난 시민 5인과 함께 수집한 데이터를 검수했습니다.
+
+
+## 프로젝트 결과
+- ['수집 데이터' 바로가기](https://datainchronicles.notion.site/138ecf4b66ae807abd7bd5456a0c3413?v=138ecf4b66ae813cb1e8000cbce76c25)
+- ['프로젝트 결과 노트' 바로가기](https://datainchronicles.notion.site/)
+
+
+### 기여한 사람들
+- 시작한 사람들 : 길가모임 - 슬, 진, yeslee, 민지
+- 함께한 사람들 : 김다영, 김주영, 박보경, 이진영, cloudy
