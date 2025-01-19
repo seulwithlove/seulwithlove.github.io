@@ -46,7 +46,6 @@ SQLD 자격증을 취득한 선배들의 팁을 나침반 삼아 계획을 세�
 
 ### 참고자료
 - [데이터자격검정 홈페이지](https://www.dataq.or.kr/www/sub/a_04.do#none)
-- [블로그:공부방법](https://www.youngestsalon.xyz/2de4e6ad-65b7-4643-94f9-575d0592420c)
 - [youtube:시험후기/팁](https://www.youtube.com/watch?v=SoZOTt7UZI4)
 - [youtube:노랭이 문제풀이](https://www.youtube.com/playlist?list=PL_hDrax6_odulENm_BrLTbbzLQCWYYf__)
 
