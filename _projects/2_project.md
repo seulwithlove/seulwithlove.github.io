@@ -6,6 +6,8 @@ img: assets/img/3.jpg
 importance: 2
 category: AI
 giscus_comments: true
+hidden: true
+
 ---
 
 Every project has a beautiful feature showcase page.

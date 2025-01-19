@@ -1,12 +1,13 @@
 ---
 layout: page
-title: 머신러닝 활용 해파리 종 분류(업로드 예정)
+title: 머신러닝 활용 해파리 종 분류
 description: 아이펠 과정에서 진행한 미니 팀 프로젝트
 img: assets/img/7.jpg
 # redirect: https://unsplash.com
 importance: 3
 category: AI
 giscus_comments: true
+hidden: true
 ---
 
 Every project has a beautiful feature showcase page.
