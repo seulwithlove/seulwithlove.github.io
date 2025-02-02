@@ -23,6 +23,14 @@ strong {
   color: var(--global-text-color);
 }
 
+.smaller-font { //작은 글씨용
+  font-size: 0.8rem;  
+}
+
+.read-post-title { //읽단쓰기클럽 제목용
+    font-size: 0.85em;
+  }
+
 html,
 body{
   font-family: 'Gowun Dodum';
@@ -55,6 +63,8 @@ strong {
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
+
+
 
 // table {
 //   td,
