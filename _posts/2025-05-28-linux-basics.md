@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SeSAC - 리눅스 기초
+title: 리눅스 기초
 date: 2025-05-28
 description: SeSAC 영등포캠퍼스 풀스택 과정 공부 기록
 tags: sesac linux shell vim trouble-shooting
